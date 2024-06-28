@@ -14,8 +14,8 @@ body {
 #top-container {
     display: flex;
     justify-content: space-between;
-    padding-left: 3%;
-    padding-right: 3%;
+    margin-left: 5%;
+        margin-right: 5%;
 }
 
 h1 {
@@ -74,6 +74,7 @@ i {
 }
 
 #btn-container {
+    margin-top: 0.3%;
     margin-left: 5%;
     margin-right: 5%;
     display: flex;
@@ -81,19 +82,31 @@ i {
 }
 
 button {
-    width: 10%;
+    width: 15%;
     padding: 1%;
     border: 1px solid white;
     border-radius: 5px;
-    background-color: rgb(68, 40, 40);
     color: white;
+    text-align: center;
     cursor: pointer;
     font-size: 1.3rem;
     transition: background-color 0.3s, transform 0.2s;
 }
 
-button:hover{
-    background-color: rgb(58, 26, 26);
+#start-btn{
+    background-color: #4caf50;
+}
+
+#reset-btn{
+    background-color: #f44336;
+}
+
+#start-btn:hover{
+    background-color: #249128;
+}
+
+#reset-btn:hover{
+    background-color: #d12215;
 }
 
 button:active {
