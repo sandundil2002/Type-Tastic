@@ -15,7 +15,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-left: 5%;
-        margin-right: 5%;
+    margin-right: 5%;
 }
 
 h1 {
@@ -64,6 +64,7 @@ i {
     border: none;
     background-color: darkgray;
     color: black;
+    cursor: text;
 }
 
 ::placeholder {
@@ -74,6 +75,7 @@ i {
 }
 
 #btn-container {
+    width: auto;
     margin-top: 0.3%;
     margin-left: 5%;
     margin-right: 5%;
@@ -82,33 +84,36 @@ i {
 }
 
 button {
-    width: 15%;
     padding: 1%;
     border: 1px solid white;
     border-radius: 5px;
     color: white;
     text-align: center;
     cursor: pointer;
-    font-size: 1.3rem;
     transition: background-color 0.3s, transform 0.2s;
 }
 
-#start-btn{
+#start-btn {
     background-color: #4caf50;
 }
 
-#reset-btn{
+#reset-btn {
     background-color: #f44336;
 }
 
-#start-btn:hover{
+#start-btn:hover {
     background-color: #249128;
 }
 
-#reset-btn:hover{
+#reset-btn:hover {
     background-color: #d12215;
 }
 
 button:active {
     transform: scale(0.95);
+}
+
+#accuracy {
+    color: white;
+    padding: 1%;
 }
