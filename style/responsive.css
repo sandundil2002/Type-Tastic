@@ -7,6 +7,8 @@
     #accuracy {
         font-size: 25px;
     }
+
+
 }
 
 @media screen and (min-width: 425px) {
@@ -16,6 +18,10 @@
 
     #accuracy {
         font-size: 28px;
+    }
+
+    #content p {
+        font-size: 0.5rem;
     }
 }
 
@@ -46,6 +52,10 @@
         font-size: 28px;
     }
 
+    #content p {
+        font-size: 1.2rem;
+    }
+
 }
 
 @media screen and (min-width: 1025px) {
@@ -60,5 +70,9 @@
 
     #accuracy {
         font-size: 40px;
+    }
+
+    #content p {
+        font-size: 1.5rem;
     }
 }

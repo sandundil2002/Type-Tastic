@@ -18,6 +18,11 @@ body {
     margin-right: 5%;
 }
 
+h2{
+    color: white;
+    padding-top: 1%;
+}
+
 h1 {
     color: white;
     font-family: "Roboto", sans-serif;
@@ -44,7 +49,6 @@ i {
     text-align: justify;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 1.5%;
     color: white;
 }
 
@@ -71,7 +75,7 @@ i {
     color: black;
     opacity: 0.5;
     font-style: italic;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 #btn-container {
@@ -116,4 +120,18 @@ button:active {
 #accuracy {
     color: white;
     padding: 1%;
+}
+
+footer {
+    margin-top: 4%;
+    font-weight: bold;
+    text-align: center;
+}
+
+#content p {
+    color: white;
+}
+
+#content p span {
+    color: rgb(161, 12, 12);
 }
