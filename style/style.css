@@ -18,7 +18,11 @@ body {
     margin-right: 5%;
 }
 
-h2{
+#light-mode{
+    display: none;
+}
+
+h2 {
     color: white;
     padding-top: 1%;
 }
@@ -33,10 +37,18 @@ h1 {
     margin: 1%;
 }
 
+#mode {
+    margin-top: 1.3%;
+}
+
 i {
     color: white;
     font-size: 3rem;
-    margin-top: 1.5%;
+}
+
+#content-container {
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 #content-area {
@@ -46,10 +58,11 @@ i {
     border: 1px solid white;
     border-radius: 7px;
     padding: 1%;
+    width: 98%;
+    height: 25vh;
     text-align: justify;
-    margin-left: 5%;
-    margin-right: 5%;
     color: white;
+    text-transform: capitalize;
 }
 
 #typing-area {
@@ -59,12 +72,13 @@ i {
 
 #txt-area {
     width: 98%;
-    height: 20vh;
+    height: 22vh;
     border-radius: 5px;
     font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
     padding: 1%;
     text-transform: capitalize;
+    text-align: justify;
     border: none;
     background-color: darkgray;
     color: black;

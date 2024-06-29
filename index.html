@@ -15,11 +15,14 @@
     <div id="top-container">
         <h2>00:30</h2>
         <h1> Typing Speed Test </h1>
-        <i class="fa-solid fa-moon"></i>
+        <div id="mode">
+            <span id="night-mode"><i class="fa-solid fa-moon"></i></span>
+            <span id="light-mode"><i class="fa-regular fa-sun"></i></span>
+        </div>
     </div>
 
-    <div id="content-area">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, beatae magni ea repellendus mollitia ullam sed tempora, aspernatur officiis et totam tenetur. Eius non repellendus dolorem commodi esse laboriosam maxime? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium mollitia culpa facilis, tempore suscipit eos. Cum repellendus voluptates eos, a neque quae asperiores nostrum tempore omnis quos, ipsa soluta? Aspernatur.
+    <div id="content-container">
+        <textarea name="" id="content-area" placeholder="Press The Start Button..." readonly></textarea>
     </div><br>
 
     <div id="typing-area">
@@ -31,7 +34,7 @@
         <span id="accuracy">Accuracy - %</span>
         <button id="reset-btn">Reset</button>
     </div>
-<script src="./js/app.js"></script>
+<script type="module" src="./js/app.js"></script>
 </body>
 
 <footer>
