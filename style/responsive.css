@@ -1,21 +1,17 @@
-@media screen and (min-width:320px) {
+@media screen and (min-width: 0px) and (max-width: 320px) {
     button {
         width: 20%;
         font-size: 25px;
     }
-
-    #accuracy {
-        font-size: 25px;
-    }
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
     button {
         font-size: 30px;
     }
 
-    #accuracy {
-        font-size: 28px;
+    #content-container {
+        margin-top: 20%;
     }
 
     #content p {
@@ -24,6 +20,10 @@
 }
 
 @media screen and (min-width: 768px) {
+    #content-container {
+        margin-top: 2%;
+    }
+
     #content-area {
         font-size: 14px;
     }
@@ -32,8 +32,9 @@
         font-size: 25px;
     }
 
+    #words,
     #accuracy {
-        font-size: 28px;
+        display: none;
     }
 }
 
@@ -46,14 +47,22 @@
         font-size: 25px;
     }
 
-    #accuracy {
-        font-size: 28px;
+    #content-container {
+        margin-top: 2%;
     }
 
     #content p {
         font-size: 1.2rem;
     }
 
+    #words,
+    #accuracy {
+        display: block;
+    }
+
+    table {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1025px) {
@@ -66,11 +75,20 @@
         font-size: 30px;
     }
 
-    #accuracy {
-        font-size: 40px;
+    #content-container {
+        margin-top: 1%;
     }
 
     #content p {
         font-size: 1.5rem;
+    }
+
+    #words,
+    #accuracy {
+        display: block;
+    }
+
+    table {
+        display: none;
     }
 }

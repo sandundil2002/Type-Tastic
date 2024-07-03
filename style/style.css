@@ -54,7 +54,7 @@ i {
 #content-area {
     font-family: "Poppins", sans-serif;
     font-optical-sizing: auto;
-    background-color: rgb(83, 68, 68);
+    background-color: #333;
     border: 1px solid white;
     border-radius: 7px;
     padding: 1%;
@@ -80,8 +80,8 @@ i {
     text-transform: capitalize;
     text-align: justify;
     border: none;
-    background-color: darkgray;
-    color: black;
+    background-color: #555;
+    color: white;
     cursor: text;
 }
 
@@ -133,11 +133,48 @@ button:active {
 
 #accuracy {
     color: white;
-    padding: 1%;
+}
+
+table {
+    width: 80%;
+    margin: 50px auto;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: center;
+}
+
+table thead {
+    background-color: #444;
+}
+
+table tbody tr {
+    background-color: #333;
+    transition: background-color 0.3s;
+}
+
+table tbody tr:hover {
+    background-color: #555;
+}
+
+table th {
+    background-color: #555;
+    color: white;
+    font-weight: bold;
+}
+
+table td {
+    color: white;
+    border-bottom: 1px solid #555;
 }
 
 footer {
-    margin-top: 4%;
+    margin-top: 2%;
     font-weight: bold;
     text-align: center;
 }
