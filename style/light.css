@@ -1,14 +1,13 @@
 body {
     background-color: #ffffff;
-    color: #000000;
     margin: 0;
-        padding: 0;
-        font-family: 'Roboto', sans-serif;
-        width: 100%;
-        height: 100vh;
-        box-sizing: border-box;
-        text-transform: capitalize;
-        transition: background-color 0.3s, color 0.3s;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 #mode {
@@ -19,6 +18,10 @@ body {
     display: none;
 }
 
+#emp {
+    color: white;
+}
+
 #top-container {
     display: flex;
     justify-content: space-between;
@@ -27,13 +30,13 @@ body {
 }
 
 h2 {
-    color: white;
+    color: black;
     padding-top: 1%;
     font-size: 2rem;
 }
 
 h1 {
-    color: white;
+    color: black;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -60,14 +63,14 @@ i {
 #content-area {
     font-family: "Poppins", sans-serif;
     font-optical-sizing: auto;
-    background-color: #333;
-    border: 1px solid white;
+    background-color: #ccc7c7;
+    border: 1px solid black;
     border-radius: 7px;
     padding: 1%;
     width: 98%;
     height: 25vh;
     text-align: justify;
-    color: white;
+    color: black;
     text-transform: capitalize;
 }
 
@@ -85,9 +88,8 @@ i {
     padding: 1%;
     text-transform: capitalize;
     text-align: justify;
-    border: none;
-    background-color: #555;
-    color: white;
+    background-color: #e0e0e0;
+    color: black;
     cursor: text;
 }
 
@@ -109,7 +111,7 @@ i {
 
 button {
     padding: 1%;
-    border: 1px solid white;
+    border: 1px solid black;
     border-radius: 5px;
     color: white;
     text-align: center;
@@ -140,7 +142,7 @@ button:active {
 #words,
 #accuracy {
     margin-top: -0.1%;
-    color: white;
+    color: black;
 }
 
 table {
@@ -162,7 +164,7 @@ table thead {
 }
 
 table tbody tr {
-    background-color: #333;
+    background-color: whitesmoke;
     transition: background-color 0.3s;
 }
 
@@ -171,13 +173,13 @@ table tbody tr:hover {
 }
 
 table th {
-    background-color: #555;
-    color: white;
+    background-color: rgb(184, 177, 164);
+    color: black;
     font-weight: bold;
 }
 
 table td {
-    color: white;
+    color: black;
     border-bottom: 1px solid #555;
 }
 
@@ -188,9 +190,9 @@ footer {
 }
 
 #content p {
-    color: white;
+    color: black;
 }
 
 #content p span {
-    color: rgb(161, 12, 12);
+    color: rgb(35, 35, 245);
 }

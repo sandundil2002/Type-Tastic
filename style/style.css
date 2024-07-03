@@ -39,10 +39,10 @@
     }
 
     #web-time {
-        color: black;
+        display: none;
     }
 
-    #mobile-time{
+    #mobile-time {
         margin-top: -0%;
     }
 }
@@ -71,7 +71,6 @@
     }
 
     #web-time {
-        color: white;
         display: block;
     }
 
@@ -80,6 +79,10 @@
     }
 
     #mobile-time {
+        display: none;
+    }
+
+    #emp {
         display: none;
     }
 }
@@ -112,6 +115,10 @@
     }
 
     #mobile-time {
+        display: none;
+    }
+
+    #emp {
         display: none;
     }
 }

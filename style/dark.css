@@ -20,6 +20,10 @@ body {
     display: none;
 }
 
+#emp{
+    color: black;
+}
+
 #top-container {
     display: flex;
     justify-content: space-between;
@@ -93,7 +97,7 @@ i {
 }
 
 ::placeholder {
-    color: black;
+    color: white;
     opacity: 0.5;
     font-style: italic;
     font-size: 1.3rem;
