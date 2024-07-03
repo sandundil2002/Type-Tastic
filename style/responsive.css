@@ -29,12 +29,21 @@
     }
 
     button {
+        height: auto;
         font-size: 25px;
     }
 
     #words,
     #accuracy {
         display: none;
+    }
+
+    #web-time {
+        color: black;
+    }
+
+    #mobile-time{
+        margin-top: -0%;
     }
 }
 
@@ -61,7 +70,16 @@
         display: block;
     }
 
+    #web-time {
+        color: white;
+        display: block;
+    }
+
     table {
+        display: none;
+    }
+
+    #mobile-time {
         display: none;
     }
 }
@@ -90,6 +108,10 @@
     }
 
     table {
+        display: none;
+    }
+
+    #mobile-time {
         display: none;
     }
 }
