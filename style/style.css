@@ -25,6 +25,7 @@ body {
 h2 {
     color: white;
     padding-top: 1%;
+    font-size: 2rem;
 }
 
 h1 {
@@ -44,6 +45,7 @@ h1 {
 i {
     color: white;
     font-size: 3rem;
+    margin-top: 15px;
 }
 
 #content-container {
@@ -94,7 +96,7 @@ i {
 
 #btn-container {
     width: auto;
-    margin-top: 0.3%;
+    margin-top: 0.5%;
     margin-left: 5%;
     margin-right: 5%;
     display: flex;
@@ -131,7 +133,8 @@ button:active {
     transform: scale(0.95);
 }
 
-#accuracy {
+#words, #accuracy {
+    margin-top: -0.1%;
     color: white;
 }
 
@@ -174,7 +177,7 @@ table td {
 }
 
 footer {
-    margin-top: 2%;
+    margin-top: -0.5%;
     font-weight: bold;
     text-align: center;
 }

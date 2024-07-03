@@ -1,17 +1,17 @@
-@media screen and (min-width: 0px) and (max-width: 320px) {
+@media screen and (min-width: 0px) {
+    h1 {
+        font-size: 3.7rem;
+    }
+
     button {
         width: 20%;
         font-size: 25px;
     }
 }
 
-@media screen and (min-width: 425px) and (max-width: 767px) {
+@media screen and (min-width: 425px) {
     button {
         font-size: 30px;
-    }
-
-    #content-container {
-        margin-top: 20%;
     }
 
     #content p {
@@ -45,6 +45,7 @@
 
     button {
         font-size: 25px;
+        height: 10vh;
     }
 
     #content-container {
@@ -65,7 +66,7 @@
     }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1440px) {
     #content-area {
         font-size: 25px;
     }
@@ -76,7 +77,7 @@
     }
 
     #content-container {
-        margin-top: 1%;
+        margin-top: 0%;
     }
 
     #content p {
