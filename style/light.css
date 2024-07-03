@@ -1,0 +1,196 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        text-transform: capitalize;
+        transition: background-color 0.3s, color 0.3s;
+}
+
+#mode {
+    cursor: pointer;
+}
+
+#light-mode {
+    display: none;
+}
+
+#top-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h2 {
+    color: white;
+    padding-top: 1%;
+    font-size: 2rem;
+}
+
+h1 {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3rem;
+    text-align: center;
+    margin: 1%;
+}
+
+#mode {
+    margin-top: 1.3%;
+}
+
+i {
+    color: black;
+    font-size: 3rem;
+    margin-top: 15px;
+}
+
+#content-container {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#content-area {
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    background-color: #333;
+    border: 1px solid white;
+    border-radius: 7px;
+    padding: 1%;
+    width: 98%;
+    height: 25vh;
+    text-align: justify;
+    color: white;
+    text-transform: capitalize;
+}
+
+#typing-area {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#txt-area {
+    width: 98%;
+    height: 22vh;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    padding: 1%;
+    text-transform: capitalize;
+    text-align: justify;
+    border: none;
+    background-color: #555;
+    color: white;
+    cursor: text;
+}
+
+::placeholder {
+    color: black;
+    opacity: 0.5;
+    font-style: italic;
+    font-size: 1.3rem;
+}
+
+#btn-container {
+    width: auto;
+    margin-top: 0.5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 1%;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#start-btn {
+    background-color: #4caf50;
+}
+
+#reset-btn {
+    background-color: #f44336;
+}
+
+#start-btn:hover {
+    background-color: #249128;
+}
+
+#reset-btn:hover {
+    background-color: #d12215;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#words,
+#accuracy {
+    margin-top: -0.1%;
+    color: white;
+}
+
+table {
+    width: 80%;
+    margin: 50px auto;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: center;
+}
+
+table thead {
+    background-color: #444;
+}
+
+table tbody tr {
+    background-color: #333;
+    transition: background-color 0.3s;
+}
+
+table tbody tr:hover {
+    background-color: #555;
+}
+
+table th {
+    background-color: #555;
+    color: white;
+    font-weight: bold;
+}
+
+table td {
+    color: white;
+    border-bottom: 1px solid #555;
+}
+
+footer {
+    margin-top: -0.5%;
+    font-weight: bold;
+    text-align: center;
+}
+
+#content p {
+    color: white;
+}
+
+#content p span {
+    color: rgb(161, 12, 12);
+}

@@ -9,6 +9,15 @@ body {
     height: 100vh;
     box-sizing: border-box;
     text-transform: capitalize;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#mode {
+    cursor: pointer;
+}
+
+#night-mode {
+    display: none;
 }
 
 #top-container {
@@ -16,10 +25,6 @@ body {
     justify-content: space-between;
     margin-left: 5%;
     margin-right: 5%;
-}
-
-#light-mode{
-    display: none;
 }
 
 h2 {
