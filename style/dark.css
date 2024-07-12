@@ -74,6 +74,7 @@ i {
     text-align: justify;
     color: white;
     text-transform: capitalize;
+    cursor: none;
 }
 
 #typing-area {

@@ -72,6 +72,7 @@ i {
     text-align: justify;
     color: black;
     text-transform: capitalize;
+    cursor: none;
 }
 
 #typing-area {

@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeStylesheet = document.getElementById("theme-stylesheet");
 
   if (localStorage.getItem("theme") === "light") {
-    themeStylesheet.href = "./style/dark.css";
-  } else {
     themeStylesheet.href = "./style/light.css";
+  } else {
+    themeStylesheet.href = "./style/dark.css";
   }
 
   nightModeToggle.addEventListener("click", () => {
@@ -22,3 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.getElementById("start-btn").addEventListener("click", contentLoad);
+
+function contentLoad() {
+  document.getElementById("content-area").textContent = paragraph[getRandomParagraph()];
+}
+
+function getRandomParagraph() {
+  return Math.floor(Math.random()*50); 
+}
