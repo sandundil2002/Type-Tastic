@@ -63,7 +63,7 @@ let timerId;
 
      timerId = setTimeout(updateTime, 1000);
    } else {
-     alert("time's up");
+     swal("Game Over", "Your Times up!", "info");
    }
  }
 
