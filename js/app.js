@@ -22,12 +22,59 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.getElementById("start-btn").addEventListener("click", contentLoad);
+document.getElementById("start-btn").addEventListener("click", () => {
+  contentLoad();
+  startTimer();
+});
 
 function contentLoad() {
-  document.getElementById("content-area").textContent = paragraph[getRandomParagraph()];
+  document.getElementById("content-area").textContent =
+    paragraph[getRandomParagraph()];
 }
 
 function getRandomParagraph() {
-  return Math.floor(Math.random()*50); 
+  return Math.floor(Math.random() * 50);
 }
+
+const webTimeElement = document.getElementById("web-time");
+const mobTimeElement = document.getElementById("mobile-time");
+
+const initialTimeString = "00:30";
+let initialTime = initialTimeString.split(":");
+let initialTotalTime = parseInt(initialTime[0]) * 60 + parseInt(initialTime[1]);
+
+let totalTime;
+let timerId;
+
+ function updateTime() {
+   if (totalTime > 0) {
+     totalTime--;
+
+     let minutes = Math.floor(totalTime / 60);
+     let seconds = totalTime % 60;
+
+     webTimeElement.textContent = `${minutes.toString().padStart(2, "0")}:${seconds
+       .toString()
+       .padStart(2, "0")}`;
+
+       mobTimeElement.textContent = `${minutes
+         .toString()
+         .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+
+     timerId = setTimeout(updateTime, 1000);
+   } else {
+     alert("time's up");
+   }
+ }
+
+ function startTimer() {
+   if (timerId) {
+     clearTimeout(timerId);
+   }
+
+   totalTime = initialTotalTime;
+   webTimeElement.textContent = initialTimeString;
+   mobTimeElement.textContent = initialTimeString
+
+   updateTime();
+ }
