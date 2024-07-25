@@ -3,14 +3,14 @@
         font-size: 3.7rem;
     }
 
-    button {
+    .btns {
         width: 20%;
         font-size: 25px;
     }
 }
 
 @media screen and (min-width: 425px) {
-    button {
+    .btns {
         font-size: 30px;
     }
 
@@ -28,7 +28,7 @@
         font-size: 14px;
     }
 
-    button {
+    .btns {
         height: auto;
         font-size: 25px;
     }
@@ -52,7 +52,7 @@
         font-size: 20px;
     }
 
-    button {
+        .btns {
         font-size: 25px;
         height: 10vh;
     }
@@ -92,7 +92,7 @@
         font-size: 25px;
     }
 
-    button {
+        .btns {
         width: 20%;
         font-size: 30px;
     }

@@ -22,6 +22,20 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.getElementById("reset-btn").addEventListener("click", () => {
+  swal({
+    title: "Are you sure?",
+    text: "Do you want to clear the text field!",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+  }).then((willDelete) => {
+    if (willDelete) {
+      document.getElementById("txt-area").value = "";
+    }
+  });
+})
+
 document.getElementById("start-btn").addEventListener("click", () => {
   contentLoad();
   startTimer();
@@ -63,7 +77,12 @@ let timerId;
 
      timerId = setTimeout(updateTime, 1000);
    } else {
-     swal("Game Over", "Your Times up!", "info");
+     swal({
+       title: "Game Over",
+       text: "Your Times up!",
+       icon: "info",
+       button: "Ok",
+     });
    }
  }
 

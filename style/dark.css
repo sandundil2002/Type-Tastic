@@ -113,7 +113,7 @@ i {
     justify-content: space-between;
 }
 
-button {
+.btns {
     padding: 1%;
     border: 1px solid white;
     border-radius: 5px;
@@ -139,7 +139,7 @@ button {
     background-color: #d12215;
 }
 
-button:active {
+.btns:active {
     transform: scale(0.95);
 }
 
