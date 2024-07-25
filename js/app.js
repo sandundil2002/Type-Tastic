@@ -23,18 +23,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.getElementById("reset-btn").addEventListener("click", () => {
-  swal({
-    title: "Are you sure?",
-    text: "Do you want to clear the text field!",
-    icon: "warning",
-    buttons: true,
-    dangerMode: true,
-  }).then((willDelete) => {
-    if (willDelete) {
-      document.getElementById("txt-area").value = "";
-    }
-  });
-})
+  const textField = document.getElementById("txt-area");
+
+  if (textField.value.trim() !== "") {
+    swal({
+      title: "Are you sure!",
+      text: "Do you want to clear the text field?",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        textField.value = "";
+      }
+    });
+  }
+});
 
 document.getElementById("start-btn").addEventListener("click", () => {
   contentLoad();
@@ -60,40 +64,40 @@ let initialTotalTime = parseInt(initialTime[0]) * 60 + parseInt(initialTime[1]);
 let totalTime;
 let timerId;
 
- function updateTime() {
-   if (totalTime > 0) {
-     totalTime--;
+function updateTime() {
+  if (totalTime > 0) {
+    totalTime--;
 
-     let minutes = Math.floor(totalTime / 60);
-     let seconds = totalTime % 60;
+    let minutes = Math.floor(totalTime / 60);
+    let seconds = totalTime % 60;
 
-     webTimeElement.textContent = `${minutes.toString().padStart(2, "0")}:${seconds
-       .toString()
-       .padStart(2, "0")}`;
+    webTimeElement.textContent = `${minutes
+      .toString()
+      .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 
-       mobTimeElement.textContent = `${minutes
-         .toString()
-         .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+    mobTimeElement.textContent = `${minutes
+      .toString()
+      .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 
-     timerId = setTimeout(updateTime, 1000);
-   } else {
-     swal({
-       title: "Game Over",
-       text: "Your Times up!",
-       icon: "info",
-       button: "Ok",
-     });
-   }
- }
+    timerId = setTimeout(updateTime, 1000);
+  } else {
+    swal({
+      title: "Game Over",
+      text: "Your Times up!",
+      icon: "info",
+      button: "Ok",
+    });
+  }
+}
 
- function startTimer() {
-   if (timerId) {
-     clearTimeout(timerId);
-   }
+function startTimer() {
+  if (timerId) {
+    clearTimeout(timerId);
+  }
 
-   totalTime = initialTotalTime;
-   webTimeElement.textContent = initialTimeString;
-   mobTimeElement.textContent = initialTimeString
+  totalTime = initialTotalTime;
+  webTimeElement.textContent = initialTimeString;
+  mobTimeElement.textContent = initialTimeString;
 
-   updateTime();
- }
+  updateTime();
+}
