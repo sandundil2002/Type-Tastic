@@ -41,8 +41,8 @@ document.getElementById("reset-btn").addEventListener("click", () => {
     }).then((willDelete) => {
       if (willDelete) {
         clearTimeout(timerId); 
+        startTimer()
         textField.value = "";
-        textField.disabled = true;
         document.getElementById("words").textContent = "Words: 0";
         document.getElementById("accuracy").textContent = "Accuracy: 0%";
         webTimeElement.textContent = initialTimeString;
