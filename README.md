@@ -5,7 +5,7 @@
 
 <h2>🚀 Demo</h2>
 
-[https://i.ibb.co/FwYzgWg/image.png](https://i.ibb.co/FwYzgWg/image.png)
+https://sandundil2002.github.io/Type-Tastic/
 
   
   
@@ -20,6 +20,17 @@ Here're some of the project's best features:
 *   Results Table: Track your performance across multiple rounds.
 *   Reset Functionality: Clear the typing area and reset metrics with a confirmation prompt.
 *   Copy/Paste Disabled: Prevents users from copying cutting or pasting text in the typing area.
+  
+
+<h2>😌 Usage</h2>
+
+Here're some of the project's best usages:
+
+*   Click the "Start" button to begin the typing test.
+*   Type the displayed text in the text area.
+*   Monitor your typing speed and accuracy in real-time.
+*   When the timer runs out, your results will be displayed in the table.
+*   Click the "Reset" button to clear the typing area and start a new round.
 
 <h2>🛠️ Installation Steps:</h2>
 
