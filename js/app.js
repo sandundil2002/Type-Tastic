@@ -22,9 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.getElementById("reset-btn").addEventListener("click", () => {
-  const textField = document.getElementById("txt-area");
+const textField = document.getElementById("txt-area");
+let round = 0;
 
+document.getElementById("reset-btn").addEventListener("click", () => {
   if (textField.value.trim() !== "") {
     swal({
       title: "Are you sure!",
@@ -35,14 +36,22 @@ document.getElementById("reset-btn").addEventListener("click", () => {
     }).then((willDelete) => {
       if (willDelete) {
         textField.value = "";
+        startTimer();
       }
     });
   }
 });
 
 document.getElementById("start-btn").addEventListener("click", () => {
+  textField.value = "";
+  document.getElementById("words").textContent = "Words: 0";
+  document.getElementById("accuracy").textContent = "Accuracy: 0%";
   contentLoad();
   startTimer();
+  round++;
+  document
+    .getElementById("txt-area")
+    .addEventListener("input", calculateMetrics);
 });
 
 function contentLoad() {
@@ -83,10 +92,11 @@ function updateTime() {
   } else {
     swal({
       title: "Game Over",
-      text: "Your Times up!",
+      text: "Your Time's up!",
       icon: "info",
       button: "Ok",
     });
+    finalizeRound();
   }
 }
 
@@ -100,4 +110,41 @@ function startTimer() {
   mobTimeElement.textContent = initialTimeString;
 
   updateTime();
+}
+
+function calculateMetrics() {
+  const typedText = textField.value;
+  const originalText = document.getElementById("content-area").textContent;
+  const words = typedText
+    .trim()
+    .split(/\s+/)
+    .filter((word) => word.length > 0).length;
+  const correctChars = typedText
+    .split("")
+    .filter((char, i) => char === originalText[i]).length;
+  const accuracy =
+    typedText.length > 0 ? (correctChars / typedText.length) * 100 : 0;
+
+  document.getElementById("words").textContent = `Words: ${words}`;
+  document.getElementById(
+    "accuracy"
+  ).textContent = `Accuracy: ${accuracy.toFixed(2)}%`;
+}
+
+function finalizeRound() {
+  const words = document.getElementById("words").textContent.split(": ")[1];
+  const accuracy = document
+    .getElementById("accuracy")
+    .textContent.split(": ")[1];
+
+  const tableBody = document.getElementById("results-table-body");
+  const newRow = document.createElement("tr");
+
+  newRow.innerHTML = `
+    <td>${round}</td>
+    <td>${words}</td>
+    <td>${accuracy}</td>
+  `;
+
+  tableBody.appendChild(newRow);
 }
