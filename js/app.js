@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nightModeToggle = document.getElementById("night-mode");
   const lightModeToggle = document.getElementById("light-mode");
   const themeStylesheet = document.getElementById("theme-stylesheet");
+  textField.disabled = true;
 
   if (localStorage.getItem("theme") === "light") {
     themeStylesheet.href = "./style/light.css";
@@ -43,20 +44,20 @@ document.getElementById("reset-btn").addEventListener("click", () => {
 });
 
 document.getElementById("start-btn").addEventListener("click", () => {
+  textField.disabled = false;
   textField.value = "";
   document.getElementById("words").textContent = "Words: 0";
   document.getElementById("accuracy").textContent = "Accuracy: 0%";
+
   contentLoad();
   startTimer();
+
   round++;
-  document
-    .getElementById("txt-area")
-    .addEventListener("input", calculateMetrics);
+  document.getElementById("txt-area").addEventListener("input", calculateMetrics);
 });
 
 function contentLoad() {
-  document.getElementById("content-area").textContent =
-    paragraph[getRandomParagraph()];
+  document.getElementById("content-area").textContent = paragraph[getRandomParagraph()];
 }
 
 function getRandomParagraph() {
@@ -80,13 +81,8 @@ function updateTime() {
     let minutes = Math.floor(totalTime / 60);
     let seconds = totalTime % 60;
 
-    webTimeElement.textContent = `${minutes
-      .toString()
-      .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
-
-    mobTimeElement.textContent = `${minutes
-      .toString()
-      .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+    webTimeElement.textContent = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+    mobTimeElement.textContent = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 
     timerId = setTimeout(updateTime, 1000);
   } else {
@@ -97,6 +93,7 @@ function updateTime() {
       button: "Ok",
     });
     finalizeRound();
+    textField.disabled = true;
   }
 }
 
@@ -109,33 +106,24 @@ function startTimer() {
   webTimeElement.textContent = initialTimeString;
   mobTimeElement.textContent = initialTimeString;
 
+  textField.disabled = false;
   updateTime();
 }
 
 function calculateMetrics() {
   const typedText = textField.value;
   const originalText = document.getElementById("content-area").textContent;
-  const words = typedText
-    .trim()
-    .split(/\s+/)
-    .filter((word) => word.length > 0).length;
-  const correctChars = typedText
-    .split("")
-    .filter((char, i) => char === originalText[i]).length;
-  const accuracy =
-    typedText.length > 0 ? (correctChars / typedText.length) * 100 : 0;
+  const words = typedText.trim().split(/\s+/).filter((word) => word.length > 0).length;
+  const correctChars = typedText.split("").filter((char, i) => char === originalText[i]).length;
+  const accuracy = typedText.length > 0 ? (correctChars / typedText.length) * 100 : 0;
 
   document.getElementById("words").textContent = `Words: ${words}`;
-  document.getElementById(
-    "accuracy"
-  ).textContent = `Accuracy: ${accuracy.toFixed(2)}%`;
+  document.getElementById("accuracy").textContent = `Accuracy: ${accuracy.toFixed(2)}%`;
 }
 
 function finalizeRound() {
   const words = document.getElementById("words").textContent.split(": ")[1];
-  const accuracy = document
-    .getElementById("accuracy")
-    .textContent.split(": ")[1];
+  const accuracy = document.getElementById("accuracy").textContent.split(": ")[1];
 
   const tableBody = document.getElementById("results-table-body");
   const newRow = document.createElement("tr");
