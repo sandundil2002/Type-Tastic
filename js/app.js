@@ -21,6 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
     themeStylesheet.href = "./style/light.css";
     localStorage.setItem("theme", "light");
   });
+
+  textField.addEventListener("copy", (e) => e.preventDefault());
+  textField.addEventListener("cut", (e) => e.preventDefault());
+  textField.addEventListener("paste", (e) => e.preventDefault());
 });
 
 const textField = document.getElementById("txt-area");
@@ -67,7 +71,7 @@ function getRandomParagraph() {
 const webTimeElement = document.getElementById("web-time");
 const mobTimeElement = document.getElementById("mobile-time");
 
-const initialTimeString = "00:30";
+const initialTimeString = "00:60";
 let initialTime = initialTimeString.split(":");
 let initialTotalTime = parseInt(initialTime[0]) * 60 + parseInt(initialTime[1]);
 
