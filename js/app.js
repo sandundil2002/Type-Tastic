@@ -1,5 +1,8 @@
 import { paragraph } from "../db/db.js";
 
+const textField = document.getElementById("txt-area");
+let round = 0;
+
 document.addEventListener("DOMContentLoaded", () => {
   const nightModeToggle = document.getElementById("night-mode");
   const lightModeToggle = document.getElementById("light-mode");
@@ -27,9 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
   textField.addEventListener("paste", (e) => e.preventDefault());
 });
 
-const textField = document.getElementById("txt-area");
-let round = 0;
-
 document.getElementById("reset-btn").addEventListener("click", () => {
   if (textField.value.trim() !== "") {
     swal({
@@ -40,8 +40,13 @@ document.getElementById("reset-btn").addEventListener("click", () => {
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
+        clearTimeout(timerId); 
         textField.value = "";
-        startTimer();
+        textField.disabled = true;
+        document.getElementById("words").textContent = "Words: 0";
+        document.getElementById("accuracy").textContent = "Accuracy: 0%";
+        webTimeElement.textContent = initialTimeString;
+        mobTimeElement.textContent = initialTimeString;
       }
     });
   }
@@ -90,12 +95,13 @@ function updateTime() {
 
     timerId = setTimeout(updateTime, 1000);
   } else {
-    swal({
-      title: "Game Over",
-      text: "Your Time's up!",
-      icon: "info",
-      button: "Ok",
-    });
+   swal({
+     title: "Game Over",
+     text: "Your Time's up!",
+     icon: "info",
+     button: "Ok",
+   });
+
     finalizeRound();
     textField.disabled = true;
   }
